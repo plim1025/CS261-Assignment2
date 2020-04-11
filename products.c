@@ -28,12 +28,10 @@
  *   initialized with the values provided.
  */
 struct product* create_product(char* name, int inventory, float price) {
-
   struct product *new_product = malloc(sizeof(struct product));
   new_product->name = name;
   new_product->inventory = inventory;
   new_product->price = price;
-
   return new_product;
 }
 
@@ -87,11 +85,6 @@ struct dynarray* create_product_array(int num_products, char** names, int* inven
   struct dynarray* new_arr = dynarray_create();
   for(int i = 0; i < num_products; i++)
     dynarray_insert(new_arr, i, create_product(names[i], inventory[i], prices[i]));
-
-  // for(int i = 0; i < num_products; i++) {
-  //   struct product* product = (struct product*)(dynarray_get(new_arr, i));
-  //   printf("%f\n", product->price);
-  // }
   return new_arr;
 }
 
