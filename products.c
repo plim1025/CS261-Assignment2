@@ -155,16 +155,17 @@ void print_products(struct dynarray* products) {
  *   the array.
  */
 struct product* find_max_price(struct dynarray* products) {
-  struct product* max = malloc(sizeof(struct product));
-  max->inventory = 0;
-  max->price = 0;
+  float max_price = 0;
+  int max_index;
   int length = dynarray_length(products);
   for(int i = 0; i < length; i++) {
     struct product* product = (struct product*)(dynarray_get(products, i));
-    if(product->price > max->price)
-      max = product;
+    if(product->price > max_price) {
+      max_price = product->price;
+      max_index = i;
+    }
   }
-  return max;
+  return (struct product*)(dynarray_get(products, max_index));
 }
 
 
@@ -190,16 +191,17 @@ struct product* find_max_price(struct dynarray* products) {
  *   the array.
  */
 struct product* find_max_investment(struct dynarray* products) {
-  struct product* max = malloc(sizeof(struct product));
-  max->inventory = 0;
-  max->price = 0;
+  float max_investment = 0;
+  int max_index;
   int length = dynarray_length(products);
   for(int i = 0; i < length; i++) {
     struct product* product = (struct product*)(dynarray_get(products, i));
-    if((product->inventory * product->price) > (max->inventory * max->price))
-      max = product;
+    if((product->inventory * product->price) > max_investment) {
+      max_investment = product->inventory * product->price;
+      max_index = i;
+    }
   }
-  return max;
+  return (struct product*)(dynarray_get(products, max_index));
 }
 
 
