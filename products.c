@@ -206,9 +206,9 @@ struct product* find_max_investment(struct dynarray* products) {
 
 
 void swap(struct product** a, struct product** b) {
-  struct product *temp = *a;
-  *a = *b;
-  *b = temp;
+  struct product temp = **a;
+  **a = **b;
+  **b = temp;
 }
 
 /*
