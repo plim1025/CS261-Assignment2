@@ -1,7 +1,7 @@
 # Assignment 2
-**Due by 11:59pm on Wednesday, 4/15/2018**
+**Due by 11:59pm on Monday, 4/20/2018**
 
-**Demo due by 11:59pm on Wednesday 4/29/2018**
+**Demo due by 11:59pm on Monday 5/4/2018**
 
 This assignment is intended to give you practice writing C code (e.g. allocating and freeing memory, working with pointers, etc.) and also to have you start working with one of the most fundamental data structures we'll see in this course: the dynamic array.  There are several parts to the assignment, each described below.
 
@@ -81,7 +81,7 @@ In order to verify that your memory freeing functions work correctly, it will be
 
 ## Submission
 
-As always, we'll be using GitHub Classroom for this assignment, and you will submit your assignment via GitHub. Just make sure your completed files are committed and pushed by the assignment's deadline to the master branch of the GitHub repo that was created for you by GitHub Classroom. A good way to check whether your files are safely submitted is to look at the master branch of your assignment repo on the github.com website (i.e. https://github.com/OSU-CS261-F18/assignment-1-YourGitHubUsername/). If your changes show up there, you can consider your files submitted.
+We will submit assignments via Gradescope. More information to come on that! A link will be provided on the canvas assignment page.
 
 ## Grading criteria
 
